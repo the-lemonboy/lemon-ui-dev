@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div class="app">      
+    <!-- <test class="a">nsjdfnj</test> -->
+
+      <btn>按钮</btn>
+      <!-- <titles></titles> -->
+      <loading class="load">加载</loading>
+      <!-- <div class="box"></div> -->
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import test from './components/frame/frame-one/src/main.vue'
+import btn from './components/button/button-one/src/main.vue'
+import titles from './components/title-frame/title-frame-one/src/main.vue'
+import loading from './components/loading/loading-two/src/main.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+components:{
+  test,
+  btn,
+  titles,
+  loading
+},
+mounted(){
+}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+html,body{
+  background: rgb(36, 5, 65);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+.app{
+  height: 100vh;
+ 
+}
+.a{
+  position: relative;
+ top:100px;
+}
+.load{
+  position: relative;
+  top: 50px;
 }
 </style>
