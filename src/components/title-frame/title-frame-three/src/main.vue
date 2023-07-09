@@ -16,7 +16,7 @@
         <filter id="filterId2" height="150%" width="150%" x="-20%" y="-20%">
           <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
           <feGaussianBlur in="thicken" stdDeviation="3" result="blurred" />
-          <feFlood :flood-color="colorArr[1]" result="glowColor" />
+          <feFlood :flood-color="borderColor[1]" result="glowColor" />
           <feComposite in="glowColor" in2="blurred" operator="in" result="softGlowColored" />
           <feMerge>
             <feMergeNode in="softGlowColored"/>
@@ -35,11 +35,11 @@
             cx="50%" cy="50%" r="50%"
           >
             <stop
-              offset="0%" :stop-color="colorArr[0]"
+              offset="0%" :stop-color="borderColor[0]"
               stop-opacity="1"
             />
             <stop
-              offset="100%" :stop-color="colorArr[0]"
+              offset="100%" :stop-color="borderColor[0]"
               stop-opacity="0"
             />
           </radialGradient>
@@ -61,15 +61,15 @@
      <use x="5" y="10" xlink:href="rect1"></use>
      <!-- 左边四边形 -->
      <g>
-     <polygon :fill="colorArr[1]" :points="`10,${getHeight-25} 20,${getHeight-25} 30,${getHeight-5} 20,${getHeight-5}`"></polygon>
-     <polygon :fill="colorArr[1]" :points="`25,${getHeight-25} 35,${getHeight-25} 45,${getHeight-5} 35,${getHeight-5}`"></polygon>
-     <polygon :fill="colorArr[1]" :points="`40,${getHeight-25} 50,${getHeight-25} 60,${getHeight-5} 50,${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`10,${getHeight-25} 20,${getHeight-25} 30,${getHeight-5} 20,${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`25,${getHeight-25} 35,${getHeight-25} 45,${getHeight-5} 35,${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`40,${getHeight-25} 50,${getHeight-25} 60,${getHeight-5} 50,${getHeight-5}`"></polygon>
     </g>
     <g>
       <!-- 右边四边形 -->
-     <polygon :fill="colorArr[1]" :points="`${getWidth-10},${getHeight-25} ${getWidth-20},${getHeight-25} ${getWidth-30},${getHeight-5} ${getWidth-20},${getHeight-5}`"></polygon>
-     <polygon :fill="colorArr[1]" :points="`${getWidth-25},${getHeight-25} ${getWidth-35},${getHeight-25} ${getWidth-45},${getHeight-5} ${getWidth-35},${getHeight-5}`"></polygon>
-     <polygon :fill="colorArr[1]" :points="`${getWidth-40},${getHeight-25} ${getWidth-50},${getHeight-25} ${getWidth-60},${getHeight-5} ${getWidth-50},${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`${getWidth-10},${getHeight-25} ${getWidth-20},${getHeight-25} ${getWidth-30},${getHeight-5} ${getWidth-20},${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`${getWidth-25},${getHeight-25} ${getWidth-35},${getHeight-25} ${getWidth-45},${getHeight-5} ${getWidth-35},${getHeight-5}`"></polygon>
+     <polygon :fill="borderColor[1]" :points="`${getWidth-40},${getHeight-25} ${getWidth-50},${getHeight-25} ${getWidth-60},${getHeight-5} ${getWidth-50},${getHeight-5}`"></polygon>
      
     </g>
   </svg>
@@ -100,7 +100,7 @@ export default {
       type: String,
       default: '#FAF800'
     },
-    colorArr: {
+    borderColor: {
       type: Array,
       default: () => { return ['yellow', 'blue'] }
     }

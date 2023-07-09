@@ -36,13 +36,13 @@
         <polygon :fill="backgroundColor" :points="`5, 5 ${getWidth - 5}, 5 ${getWidth - 5} ${getHeight - 5} 5, ${getHeight - 5}`" />
   
         <use
-          :stroke="mergedColor[0]"
+          :stroke="borderColor[0]"
           stroke-getWidth="1"
           :xlink:href="`#${path}`"
         />
   
         <use
-          :stroke="mergedColor[1]"
+          :stroke="borderColor[1]"
           stroke-width="3"
           :xlink:href="`#${path}`"
           :mask="`url(#${mask})`"
@@ -76,7 +76,7 @@
             type:String,
             default:'200px'
         },
-        mergedColor:{
+        borderColor:{
             type:Array,
             default:()=>{return ['blue','gray']}
         },

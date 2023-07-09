@@ -42,7 +42,7 @@ export default {
             type: String,
             default: '40px'
         },
-        colorArr: {
+             borderColor: {
             type: Array,
             default: () => { return ['blue', 'gray'] }
         },

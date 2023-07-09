@@ -1,6 +1,6 @@
 
 
-export const converse =  (param,node,direction)=>{
+export const converse =  (param,node,direction,ask)=>{
         const unit = param.replace(/\d/g, "")
         const number = parseFloat(param.match(/\d+/)[0]);
         let pxValue=null
@@ -13,7 +13,6 @@ export const converse =  (param,node,direction)=>{
         defaultRootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
         pxValue= defaultRootFontSize*number
         // 打印根节点字体大小的默认值
-        console.log('Default Root Font Size:', defaultRootFontSize);
       }
       // else if(unit=='em'){
       //   let theParentNode = node.parentNode
@@ -43,6 +42,11 @@ export const converse =  (param,node,direction)=>{
       else if(unit === 'px' || unit === ''){
         pxValue = number;
       }
+
+      // ask
+      if(number<=ask){
+        console.error(`the Width or Height can't less than ${pxValue}px`)
+      } 
       return pxValue;
 
 }

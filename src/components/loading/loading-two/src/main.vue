@@ -1,7 +1,7 @@
 <template>
   <div class="l-loading-two">
     <svg width="60px" height="50px">
-  <circle :fill="colorArr[0]" stroke="none" cx="6" cy="20" r="6">
+  <circle :fill="backgroundColor[0]" stroke="none" cx="6" cy="20" r="6">
     <animateTransform 
        attributeName="transform" 
        dur="1s" 
@@ -10,7 +10,7 @@
        repeatCount="indefinite" 
        begin="0.1"/>
   </circle>
-  <circle :fill="colorArr[0]" stroke="none" cx="30" cy="20" r="6">
+  <circle :fill="backgroundColor[0]" stroke="none" cx="30" cy="20" r="6">
     <animateTransform 
        attributeName="transform" 
        dur="1s" 
@@ -19,7 +19,7 @@
        repeatCount="indefinite" 
        begin="0.2"/>
   </circle>
-  <circle :fill="colorArr[0]" stroke="none" cx="54" cy="20" r="6">
+  <circle :fill="backgroundColor[0]" stroke="none" cx="54" cy="20" r="6">
     <animateTransform 
        attributeName="transform" 
        dur="1s" 
@@ -39,7 +39,7 @@
 <script>
 export default {
     props:{
-        colorArr:{
+      backgroundColor:{
             type:Array,
             default:()=>{return ['#511BD6']}
         },

@@ -39,11 +39,11 @@ export default {
     props:{
         width:{
             type:String,
-            default:'100%'
+            default:'300px'
         },
         height:{
             type:String,
-            default:'80px'
+            default:'50px'
         },
         backgroundColor: {
       type: String,
@@ -61,7 +61,7 @@ export default {
 
     computed:{
         getWidth(){
-            return converse(this.width,this.$refs.leTitleBox,'width');
+            return converse(this.width,this.$refs.leTitleBox,'width',200);
         },
         getHeight(){
             return converse(this.height,this.$refs.leTitleBox,'height');

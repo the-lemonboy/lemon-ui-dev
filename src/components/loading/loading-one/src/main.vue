@@ -8,7 +8,7 @@
           fill="transparent"
           stroke-width="3"
           stroke-dasharray="31.415, 31.415"
-          :stroke="colorArr[0]"
+          :stroke="backgroundColor[0]"
           stroke-linecap="round"
         >
           <animateTransform
@@ -28,7 +28,7 @@
           fill="transparent"
           stroke-width="3"
           stroke-dasharray="15.7, 15.7"
-          :stroke="colorArr[1]"
+          :stroke="backgroundColor[1]"
           stroke-linecap="round"
         >
           <animateTransform
@@ -49,7 +49,7 @@
   <script>
   export default {
        props:{
-        colorArr:{
+        backgroundColor:{
         type:Array,
         default:['#511BD6','#A98CFA']
        },

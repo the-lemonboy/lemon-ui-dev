@@ -2,7 +2,7 @@
   <div class="l-loading-three">
   <svg  x="0px" y="0px"
      width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-    <rect x="0" y="20" width="4" height="5" :fill="colorArr[0]">
+    <rect x="0" y="20" width="4" height="5" :fill="backgroundColor[0]">
       <animate attributeName="height" attributeType="XML"
         values="5;21;5" 
         begin="0s" dur="0.6s" repeatCount="indefinite" />
@@ -10,7 +10,7 @@
         values="13; 5; 13"
         begin="0s" dur="0.6s" repeatCount="indefinite" />
     </rect>
-    <rect x="10" y="16" width="4" height="5" :fill="colorArr[1]">
+    <rect x="10" y="16" width="4" height="5" :fill="backgroundColor[1]">
       <animate attributeName="height" attributeType="XML"
         values="5;21;5" 
         begin="0.15s" dur="0.6s" repeatCount="indefinite" />
@@ -18,7 +18,7 @@
         values="13; 5; 13"
         begin="0.15s" dur="0.6s" repeatCount="indefinite" />
     </rect>
-    <rect x="20" y="16" width="4" height="5" :fill="colorArr[2]">
+    <rect x="20" y="16" width="4" height="5" :fill="backgroundColor[2]">
       <animate attributeName="height" attributeType="XML"
         values="5;21;5" 
         begin="0.3s" dur="0.6s" repeatCount="indefinite" />
@@ -36,7 +36,7 @@
 <script>
 export default {
 props:{
-    colorArr:{
+    backgroundColor:{
         type:Array,
         default:()=>{return ['#511BD6'],['#511BD6'],['#511BD6']}
     },

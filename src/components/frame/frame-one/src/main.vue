@@ -1,18 +1,18 @@
 <template>
     <div
       class="l-border-box-one"
-      :style="`box-shadow: inset 0 0 40px ${mergedColor[0]}; border: 1px solid ${mergedColor[0]}; background-color:${backgroundColor}; width:${getWidth}px; height:${getHeight}px`"
+      :style="`box-shadow: inset 0 0 40px ${borderColor[0]}; border: 1px solid ${borderColor[0]}; background-color:${backgroundColor}; width:${getWidth}px; height:${getHeight}px`"
     >
       <svg class="l-border-svg-container" :width="getWidth" :height="getHeight">
-        <polyline class="l-corner-one" :stroke="mergedColor[0]" :points="`0, 25 0, 0 25, 0`" />
-        <polyline class="l-corner-one" :stroke="mergedColor[0]" :points="`${getWidth - 25}, 0 ${getWidth}, 0 ${getWidth}, 25`" />
-        <polyline class="l-corner-one" :stroke="mergedColor[0]" :points="`${getWidth - 25}, ${getHeight} ${getWidth}, ${getHeight} ${getWidth}, ${getHeight - 25}`" />
-        <polyline class="l-corner-one" :stroke="mergedColor[0]" :points="`0, ${getHeight - 25} 0, ${getHeight} 25, ${getHeight}`" />
+        <polyline class="l-corner-one" :stroke="borderColor[0]" :points="`0, 25 0, 0 25, 0`" />
+        <polyline class="l-corner-one" :stroke="borderColor[0]" :points="`${getWidth - 25}, 0 ${getWidth}, 0 ${getWidth}, 25`" />
+        <polyline class="l-corner-one" :stroke="borderColor[0]" :points="`${getWidth - 25}, ${getHeight} ${getWidth}, ${getHeight} ${getWidth}, ${getHeight - 25}`" />
+        <polyline class="l-corner-one" :stroke="borderColor[0]" :points="`0, ${getHeight - 25} 0, ${getHeight} 25, ${getHeight}`" />
   
-        <polyline class="l-corner-two" :stroke="mergedColor[1]" :points="`0, 10 0, 0 10, 0`" />
-        <polyline class="l-corner-two" :stroke="mergedColor[1]" :points="`${getWidth - 10}, 0 ${getWidth}, 0 ${getWidth}, 10`" />
-        <polyline class="l-corner-two" :stroke="mergedColor[1]" :points="`${getWidth - 10}, ${getHeight} ${getWidth}, ${getHeight} ${getWidth}, ${getHeight - 10}`" />
-        <polyline class="l-corner-two" :stroke="mergedColor[1]" :points="`0, ${getHeight - 10} 0, ${getHeight} 10, ${getHeight}`" />
+        <polyline class="l-corner-two" :stroke="borderColor[1]" :points="`0, 10 0, 0 10, 0`" />
+        <polyline class="l-corner-two" :stroke="borderColor[1]" :points="`${getWidth - 10}, 0 ${getWidth}, 0 ${getWidth}, 10`" />
+        <polyline class="l-corner-two" :stroke="borderColor[1]" :points="`${getWidth - 10}, ${getHeight} ${getWidth}, ${getHeight} ${getWidth}, ${getHeight - 10}`" />
+        <polyline class="l-corner-two" :stroke="borderColor[1]" :points="`0, ${getHeight - 10} 0, ${getHeight} 10, ${getHeight}`" />
       </svg>
   
       <div class="border-box-content">
@@ -34,7 +34,7 @@
         type: String,
         default: '80px'
       },
-      mergedColor: {
+      borderColor: {
         type: Array,
         default: () => { return ['blue', 'gray'] }
       },

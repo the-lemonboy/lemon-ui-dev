@@ -3,7 +3,7 @@
     <!-- <test class="a">nsjdfnj</test> -->
 
       <btn>按钮</btn>
-      <!-- <titles></titles> -->
+      <titles></titles>
       <loading class="load">加载</loading>
       <!-- <div class="box"></div> -->
     </div>
@@ -12,7 +12,7 @@
 <script>
 import test from './components/frame/frame-one/src/main.vue'
 import btn from './components/button/button-one/src/main.vue'
-import titles from './components/title-frame/title-frame-one/src/main.vue'
+import titles from './components/title-frame/title-frame-two/src/main.vue'
 import loading from './components/loading/loading-two/src/main.vue'
 export default {
 components:{
